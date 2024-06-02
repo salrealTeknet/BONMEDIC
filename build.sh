@@ -1,2 +1,7 @@
-pip install -r requirements.txt 
-python3.9 manage.py collectstatic
+#!/bin/bash
+
+pip install --upgrade pip
+pip install --upgrade setuptools
+pip install --upgrade wheel
+
+pip install --target . -r requirements.txt
