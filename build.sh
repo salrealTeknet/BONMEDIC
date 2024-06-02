@@ -1,4 +1,2 @@
-#!/bin/bash
-
-
-pip install --target . -r requirements.txt
+pip install -r requirements.txt 
+python3.9 manage.py collectstatic
