@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Near Expiry Products{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <h1>Products Near Expiry</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Expiry Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in near_expiry_stocks %}
+            <tr>
+                <td>{{ stock.id }}</td>
+                <td>{{ stock.name }}</td>
+                <td>{{ stock.quantity }}</td>
+                <td>{{ stock.expiry_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'export_near_expiry_to_csv' %}" class="btn btn-primary">Download as CSV</a>
+</div>
+{% endblock content %}
