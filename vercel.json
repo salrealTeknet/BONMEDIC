@@ -281,14 +281,14 @@ json
       }
     },
     {
-      "src": "inventory_management/wsgi.py",
+      "src": "BONMEDIC/wsgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "inventory_management/wsgi.py"
+      "dest": "BONMEDIC/wsgi.py"
     }
   ]
 }
